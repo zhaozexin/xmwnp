@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gbk">
+</head>
+<body>
+
+<h1>Welcome to XMWNP!</h1>
+
+<h2>安装与配置</h2>
+<ul>
+	<li>假定安装目录为 D:/xmwnp </li>
+	<li>从 http://nginx.org/ 下载最新稳定版本的Nginx，解压到安装目录。
+	<li>从 http://windows.php.net/download 下载最新稳定版本的 PHP for Window 版本，建议选择 Non Thread Safe & VC6 版本，解压到安装目录。
+	<li>修改 conf/nginx.conf, 找到PHP FastCGI配置部分（70行）,注意修改 $fastcgi_script_name 前的目录路径为你的安装目录。
+		<pre>
+		fastcgi_param  SCRIPT_FILENAME  d:/xmwnp/www$fastcgi_script_name;
+		</pre>
+</ul>
+
+
+</body>
+</html>
